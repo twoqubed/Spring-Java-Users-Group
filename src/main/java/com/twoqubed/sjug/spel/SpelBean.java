@@ -2,13 +2,13 @@ package com.twoqubed.sjug.spel;
 
 public class SpelBean {
 
-    private String myProperty;
+    private String name;
 
-    public String getMyProperty() {
-        return myProperty;
+    public String getName() {
+        return name;
     }
 
-    public void setMyProperty(String myProperty) {
-        this.myProperty = myProperty;
+    public void setName(String name) {
+        this.name = name;
     }
 }

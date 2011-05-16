@@ -1,7 +1,6 @@
 package com.twoqubed.sjug.spel;
 
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -31,6 +30,6 @@ public class SpelBeanTest {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spel-context.xml");
         SpelBean spelBean = context.getBean("spelBean", SpelBean.class);
 
-        assertEquals("foo", spelBean.getMyProperty());
+        assertEquals("foo", spelBean.getName());
     }
 }
