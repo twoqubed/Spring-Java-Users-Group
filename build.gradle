@@ -1,2 +1,12 @@
 apply plugin: 'java'
 
+dependencies {
+    compile "org.springframework:spring-context:3.1.0.M1"
+    testCompile "junit:junit:4.8" 
+}
+
+repositories {
+    mavenCentral()
+    mavenRepo urls: "http://s3.amazonaws.com/maven.springframework.org/milestone"
+}
+
