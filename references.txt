@@ -4,5 +4,10 @@ http://static.springsource.org/spring/docs/3.1.0.M1/spring-framework-reference/h
 
 Profile References
 ==================
+http://blog.springsource.com/2011/02/11/spring-framework-3-1-m1-released/
 http://blog.springsource.com/2011/02/14/spring-3-1-m1-introducing-profile/
 https://github.com/cbeams/spring-3.1-profiles-xml
+
+Source Code
+===========
+https://github.com/twoqubed/Spring-Java-Users-Group
