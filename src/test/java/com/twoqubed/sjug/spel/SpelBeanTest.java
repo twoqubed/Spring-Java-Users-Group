@@ -32,4 +32,14 @@ public class SpelBeanTest {
 
         assertEquals("foo", spelBean.getName());
     }
+
+    @Test
+    public void testSystemPropertyForAnnotation() {
+        System.setProperty("my.annotation.property", "bar");
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spel-context.xml");
+        SpelPropertyBean spelPropertyBean = context.getBean("spelPropertyBean", SpelPropertyBean.class);
+
+        assertEquals("bar", spelPropertyBean.getAnnotationProperty());
+    }
 }

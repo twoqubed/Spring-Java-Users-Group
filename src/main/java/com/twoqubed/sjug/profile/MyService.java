@@ -1,4 +1,6 @@
 package com.twoqubed.sjug.profile;
 
-public class MyService {
+public interface MyService {
+
+    String saySomething();
 }

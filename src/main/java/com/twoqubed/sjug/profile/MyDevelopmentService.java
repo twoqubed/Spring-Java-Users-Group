@@ -1,6 +1,8 @@
 package com.twoqubed.sjug.profile;
 
-public interface MyDevelopmentService {
+public class MyDevelopmentService implements MyService {
 
-    void doSomething();
+    public String saySomething() {
+        return "development";
+    }
 }
