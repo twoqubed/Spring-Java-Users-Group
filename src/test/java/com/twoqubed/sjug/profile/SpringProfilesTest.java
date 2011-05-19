@@ -14,7 +14,6 @@ public class SpringProfilesTest {
 
     private Properties properties;
 
-
     @Before
     public void cacheSystemProperties() {
         properties = System.getProperties();
@@ -40,6 +39,18 @@ public class SpringProfilesTest {
     public void shouldLoadDevelopmentBeanBySettingSystemProperty() {
         System.setProperty("spring.profiles.active", "development");
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:profile-context.xml");
+
+        MyService myService = context.getBean("myService", MyService.class);
+
+        assertThat(myService, is(MyDevelopmentService.class));
+    }
+
+    @Test
+    public void shouldLoadDevelopmentBeanFromMultipleContextFiles() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "classpath:development-context.xml", "classpath:production-context.xml");
+        context.getEnvironment().setActiveProfiles("development");
+        context.refresh();
 
         MyService myService = context.getBean("myService", MyService.class);
 
